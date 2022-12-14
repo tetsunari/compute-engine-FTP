@@ -108,6 +108,10 @@ chmod 777 /home/hoge-ftp/ftp_dir
 reboot
 ```
 
+## compute engineの設定
+[参考](https://qiita.com/crisaruma/items/14604c0d9c84884675b6)
+
+
 ### 追加
 ## SFTP接続設定方法
 
