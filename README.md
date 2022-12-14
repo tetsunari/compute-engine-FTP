@@ -1,6 +1,3 @@
-# lan-tern-pos-ftp
-
-
 ## OS初期設定
 
 Linuxユーザーを作成。
@@ -60,7 +57,7 @@ git config --global core.editor 'vim -c "set fenc=utf-8"'
 
 設定完了後にGithubからリポジトリをpullする。
 ```
-git clone git@github.com:eclettuce/lan-tern-pos-ftp.git
+git clone git@github.com:tetsunari/compute-engine-FTP.git
 ```
 
 ### VM起動時にスクリプト実行するように設定(固定グローバルipではないため)
@@ -85,25 +82,25 @@ EOF
 ### os設定/vsftpdインストール・設定のスクリプトを実行
 rootユーザーで下記コマンドを実行
 ```
-sh lan-tern-pos-ftp/infrastructure/ftp_script.sh
+sh compute-engine-FTP/ftp_script.sh
 ```
 
 ### vsftpdの設定を行う
 rootユーザーで下記コマンドを実行
 ```
 vim /etc/vsftpd/user_list
-→lettuce-ftp（追加）
+→hoge-ftp（追加）
 
 mkdir /etc/vsftpd/user_conf
 
-vi /etc/vsftpd/user_conf/lettuce-ftp
-→local_root=/home/lettuce-ftp/ftp_dir(追加)
-mkdir /home/lettuce-ftp/ftp_dir
+vi /etc/vsftpd/user_conf/hoge-ftp
+→local_root=/home/hoge-ftp/ftp_dir(追加)
+mkdir /home/hoge-ftp/ftp_dir
 ```
 
-### lettuce-ftpに権限付与
+### hoge-ftpに権限付与
 ```
-chmod +x 
+chmod 777 /home/hoge-ftp/ftp_dir
 ```
 
 ### 再起動
@@ -116,6 +113,6 @@ reboot
 
 ### 自分のパソコンでssh鍵を作成する
 ```
-ssh-keygen -t rsa -b 4096 -C “lettuce-ftp@stage” -f ~/.ssh/stage_sftp_rsa
+ssh-keygen -t rsa -b 4096 -C “hoge-ftp@stage” -f ~/.ssh/stage_sftp_rsa
 ```
 ### .pubの内容をcompute engineに記載する
