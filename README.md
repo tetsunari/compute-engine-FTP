@@ -112,7 +112,6 @@ reboot
 [参考](https://qiita.com/crisaruma/items/14604c0d9c84884675b6)
 
 
-### 追加
 ## SFTP接続設定方法
 
 ### 自分のパソコンでssh鍵を作成する
