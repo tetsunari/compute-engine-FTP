@@ -78,6 +78,9 @@ SyslogIdentifier=Diskutilization
 WantedBy=multi-user.target
 EOF
 ```
+```
+systemctl enabled autorun.service
+```
 
 ### os設定/vsftpdインストール・設定のスクリプトを実行
 rootユーザーで下記コマンドを実行
